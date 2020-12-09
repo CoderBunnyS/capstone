@@ -1,0 +1,5 @@
+<h1>Delete {{profile.childname}}'s profile' ?</h1>
+<form method="POST" action="{% url 'profile_delete' pk=profile.pk %}">
+    {% csrf_token %}
+    <input type="submit" value="Confirm Delete">
+</form>

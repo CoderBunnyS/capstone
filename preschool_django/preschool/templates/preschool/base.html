@@ -1,0 +1,15 @@
+{% load static %}
+<html>
+  <head>
+    <title>One Family Developmental Pre-School</title>
+    <link rel="stylesheet" href="{% static 'css/preschool.css' %}" />
+  </head>
+
+  <body>
+    <a href="/"><h1>One Family Developmental Pre-School</h1></a>
+    <nav>
+      <a href="/">Profile List</a>
+    </nav>
+    {% block content %} {% endblock %}
+  </body>
+</html>
