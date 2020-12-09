@@ -1,10 +1,11 @@
 {% extends 'preschool/base.html' %} {% block content %}
 
 <h2>Profiles</h2>
+<h4>Child's Name: {{ profile.childname }}</h4>
 <ul>
-  <li>Child's Name: {{ profile.childname }}</li>
+  
   <li>Parent's Name: {{ profile.parentname }}</li>
-  <li>Child's Age{{ profile.age }}</li>
+  <li>Child's Age: {{ profile.age }}</li>
   <li>Child's date of birth: {{ profile.dob }}</li>
   <li>Phone Number: {{ profile.phonenum }}</li>
   <li>Email Address: {{ profile.email }}</li>

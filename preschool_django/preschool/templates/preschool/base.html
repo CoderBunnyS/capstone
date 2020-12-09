@@ -1,5 +1,8 @@
 {% load static %}
+{% load bootstrap3 %}
+{% block content %}
 <html>
+ 
   <head>
     <title>One Family Developmental Pre-School</title>
     <link rel="stylesheet" href="{% static 'css/preschool.css' %}" />
@@ -8,8 +11,19 @@
   <body>
     <a href="/"><h1>One Family Developmental Pre-School</h1></a>
     <nav>
-      <a href="/">Profile List</a>
+      <a href="/profiles">Profile List</a>
     </nav>
-    {% block content %} {% endblock %}
+    
+     
+      <form action="/your/url" method="post" class="form">
+      {% bootstrap_form form %}
+      {% buttons %}
+      <button type="submit" class="btn btn-primary">
+      {% bootstrap_icon "star"%} SUBMIT
+      </button>
+      {% endbuttons %}
+      </form>
+      
   </body>
+  {% endblock %}
 </html>

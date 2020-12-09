@@ -54,3 +54,7 @@ def profile_edit(request, pk):
 def profile_delete(request, pk):
     Profile.objects.get(id=pk).delete()
     return redirect('profile_list')
+
+class Home(View):
+    def get(self, request):
+        return render(request, 'preschool/Home.html')
