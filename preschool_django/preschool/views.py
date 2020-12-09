@@ -58,3 +58,11 @@ def profile_delete(request, pk):
 class Home(View):
     def get(self, request):
         return render(request, 'preschool/Home.html')
+
+class Contact(View):
+    def get(self, request):
+        return render(request, 'preschool/contact.html')
+
+class Staff(View):
+    def get(self, request):
+        return render(request, 'preschool/staff.html')

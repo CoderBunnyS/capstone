@@ -1,6 +1,15 @@
-{% extends 'preschool/base.html' %} {% block content %}
+{% extends 'preschool/base.html' %}
+{% load static %}
+{% block content %}
 
-
+<header>
+    <div class="topnav">
+        <a class="active" href="">Home</a>
+        <a href="{% url 'profile_create' %}">Register</a>
+        <a href="{% url 'staff' %}">Our Staff</a>
+        <a href="{% url 'contact' %}">Contact Us</a>
+      </div> 
+</header>
 <h2>Home Page</h2>
 <h3>One Family Welcomes Everyone</h3>
 <p>One family believes that there is no wrong way to be a human and that we are all a part of the same human family. Our classes are geared towards teaching our kids to help others and to ask for help themselves. We have students of all nationalities, colors and abilities</p>

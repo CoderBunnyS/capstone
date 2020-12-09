@@ -1,4 +1,12 @@
-{% extends 'preschool/base.html' %} {% block content %}
+{% extends 'preschool/base.html' %} {% load static %} {% block content %}
+<header>
+  <div class="topnav">
+      <a class="active" href="/">Home</a>
+      <a href="{% url 'profile_create' %}">Register</a>
+      <a href="{% url 'staff' %}">Our Staff</a>
+      <a href="{% url 'contact' %}">Contact Us</a>
+    </div> 
+</header>
 <h1>New Profile</h1>
 <form method="POST" class="artist-form">
   {% csrf_token %} {{ form.as_p }}
