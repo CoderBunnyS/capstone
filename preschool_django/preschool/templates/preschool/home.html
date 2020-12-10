@@ -5,6 +5,8 @@
 
 <html>
     <head>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
         <link rel= "stylesheet" type= "text/css" href= "../../static/css/preschool.css">
     </head>
 <header>
@@ -15,41 +17,47 @@
         <a href="{% url 'contact' %}">Contact Us</a>
       </div> 
 </header>
-<h2>Home Page</h2>
+<h1 class="homeTitle">One   Family   Developmental   Preschool</h1>
+<div class="homePage row">
+<div class="column" id="introColumn">
+
 <h3>One Family Welcomes Everyone</h3>
-<p>One family believes that there is no wrong way to be a human and that we are all a part of the same human family. Our classes are geared towards teaching our kids to help others and to ask for help themselves. We have students of all nationalities, colors and abilities</p>
-
-
+<p>One family believes that there is no wrong way to be you and that we are all a part of the same human family. Our classes are geared towards teaching our kids to help others and to ask for help themselves. We have students of all nationalities, colors and abilities</p>
+</div>
+<div class="column" id="introColumn"></div>
 <img src="https://www.naeyc.org/sites/default/files/styles/page_header_media_large/public/102017/everyChild_DSC2547.jpg?itok=FrLHrwsV&timestamp=1507834687" />
-<h3>Register your child today</h3>
-<button><a href="{% url 'profile_list' %}" >See our current enrolled children</a></button>
-<button><a href="{% url 'profile_create' %}">Register to reserve your space</a></button>
+</div>
+</div>
+
+<h3 class="register">Register your child today</h3>
+<button class="button"><a href="{% url 'profile_list' %}" >See our current enrolled children</a></button>
+<button class="button"><a href="{% url 'profile_create' %}">Register to reserve your space</a></button>
 <br>
 <br>
 
-<div class="iconBox">
+<div class="iconBox row" id="row">
 
-<div class="classIcons">
-    <div class="vegHeader">{% svg 'peas' %}</div>
-    <div class="w3-container w3-center">
-      <p class="iconPara">Our infant class are called sweet peas. They're swaddled up in their little pod.</p>
-    </div>
-</div>
-
-<div class="classIcons">
-    <div class="vegHeader">{% svg 'carrot' %}</div>
-    <div class="w3-container w3-center">
-      <p class="iconPara">Our toddler class are called little carrots. They've done some growing but they're still snug in the ground. </p>
-    </div>
-</div>
-
-<div class="classIcons">
-    <div class="vegHeader">{% svg 'tomato' %}</div>
-    <div class="w3-container w3-center">
-      <p class="iconPara">Our preschool class are called red tomatoes. They've grown up and are ready to see the sun! </p>
-    </div>
-</div>
-
+    <div class="iconCard column" id="column1">
+        <header class="vegHeader" id="peas">{% svg 'peas' %}</header>
+        <div class="w3-container w3-center">
+            <hr>
+            <h3 class="iconPara">Our infant class are called sweet peas. They're swaddled up in their little pod.</h3>
+        </div>
+      </div>
+    <div class="iconCard column" id="column2">
+        <div class="vegHeader" id="carrot">{% svg 'carrot' %}</div>
+        <div class="w3-container w3-center">
+            <hr>
+            <h3 class="iconPara">Our toddler class are called little carrots. They've done some growing but they're still snug in the ground. </h3>
+        </div>
+      </div>
+    <div class="iconCard column" id="column3">
+        <div class="vegHeader" id="tomato">{% svg 'tomato' %}</div>
+        <div class="w3-container w3-center">
+            <hr>
+            <h3 class="iconPara">Our preschool class are called red tomatoes. They've grown up and are ready to see the sun! </h3>
+        </div>
+      </div>
 </div>
 
 

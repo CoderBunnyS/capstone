@@ -1,9 +1,7 @@
 body {
     font-family: 'Helvetica Neue', sans-serif;
-    max-width: 50em;
     margin: auto;
-    padding: 2em 1em;
-    
+    padding: 2em 1em;    
 }
 
 
@@ -19,9 +17,10 @@ li {
 h1 {
     font: inherit;
     color: inherit;
-    letter-spacing: -.05em;
+    
     text-decoration: none;
-    border-bottom: 1px solid purple;
+    
+    
 }
 
 h2>a {
@@ -72,8 +71,9 @@ a.no-fav {
 /* NAVIGATION BAR */
 /* Add a black background color to the top navigation */
 .topnav {
-    background-color: #333;
+    background-color: #F27A10;
     overflow: hidden;
+    height: 20%;
   }
   
   /* Style the links inside the navigation bar */
@@ -81,22 +81,47 @@ a.no-fav {
     float: left;
     color: #f2f2f2;
     text-align: center;
-    padding: 14px 16px;
+    padding: 40px 35px;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 24px;
+    
   }
   
   /* Change the color of links on hover */
   .topnav a:hover {
-    background-color: #ddd;
+    background-color: #EC2A2E;
     color: black;
   }
   
   /* Add a color to the active/current link */
   .topnav a.active {
-    background-color: blue;
+    background-color: #7DB609;
     color: white;
   }
+
+
+/* --------- HOME PAGE PARAGRAPH AND PICTURE------------ */
+
+.homePage {
+    margin: 50px;
+    
+}
+.homeTitle {
+    font-family: 'Bubblegum Sans', cursive;
+    width: 100%;
+    font-size: 100px;
+    text-align: center;
+    
+}
+
+#introColumn {
+    width: 50%;
+    column-gap: 25px;
+}
+
+
+
+
 
   /* Staff Pictures */
   .column {
@@ -137,14 +162,12 @@ a.no-fav {
   
   .button {
     border: none;
-    outline: 0;
-    display: inline-block;
-    padding: 8px;
+    display: inline;
+    
     color: white;
-    background-color: #000;
     text-align: center;
     cursor: pointer;
-    width: 100%;
+   
   }
   
   .button:hover {
@@ -205,14 +228,93 @@ input[type=text], select, textarea {
 } 
 .vegHeader {
     display: inline;
-    columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: space-between;
+}
+#peas {
+    
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: auto;
+    padding: 25px 0px;
+}
+#carrot {
+    
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 25px 0px;
+}
+#tomato {
+    
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 25px 0px;
 }
 .iconBox {
-    columns: 1fr 1fr 1fr;
-    border: 5px solid red;
+    align-items: center;
+    color: gray;
+    display: inline;
+    justify-content: space-evenly;
 }
 .iconPara {
-    display: inline;
-    columns: 1fr 1fr 1fr;
-    border: 5px solid blue; 
+     
+    padding: 25px 40px;
+    text-align: left;
+    font-size: larger;
+}
+.iconCard {
+    display: block;
+    width: 30%;
+    
+    box-shadow: 4px 4px 8px gray;
+    height: 400px;
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+    align-items: center;
+    justify-content: center;
+
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+
+  #column1, #column2, #column3 {
+    width: 30%;
+    column-gap: 40px;
+    column-gap: 150px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  #row {
+      display: flex;
+  }
+  
+
+
+
+@media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    }
+    #column1, #column2, #column3 {
+      width: 100%;
+    }
+  }
+
+@media screen and (max-width: 600px) {
+    #row {
+    display: block;
+   
+  }
 }
