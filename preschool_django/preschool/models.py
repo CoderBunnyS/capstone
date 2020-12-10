@@ -23,6 +23,7 @@ class Profile(models.Model):
     phonenum = models.CharField(max_length=10, default='') 
     email = models.EmailField(max_length=254, unique=True, default='')
     allergies = models.CharField(max_length=100, default='')
+    public = models.BooleanField(default=True)
 
     def __str__(self):
         return self.childname

@@ -1,15 +1,21 @@
-{% extends 'preschool/base.html' %} {% load static %} {% block content %}
+{% extends 'preschool/base.html' %} 
+{% load static %} 
+{% block content %}
 
+<html>
+    <head>
+        <link rel= "stylesheet" type= "text/css" href= "../../static/css/preschool.css">
+    </head>
 <header>
     <div class="topnav">
-        <a class="active" href="/">Home</a>
+        <a  href="/">Home</a>
         <a href="{% url 'profile_create' %}">Register</a>
         <a href="{% url 'staff' %}">Our Staff</a>
-        <a href="{% url 'contact' %}">Contact Us</a>
+        <a class="active" href="{% url 'contact' %}">Contact Us</a>
       </div> 
 </header>
-<div class="container">
-    <form action="action_page.php">
+<div class="contactContainer">
+    <form action="mailto:staff@onefamilypreschool.com">
   
       <label for="fname">First Name</label>
       <input type="text" id="fname" name="firstname" placeholder="Your name..">
@@ -17,15 +23,15 @@
       <label for="lname">Last Name</label>
       <input type="text" id="lname" name="lastname" placeholder="Your last name..">
   
-      <label for="country">Country</label>
-      <select id="country" name="country">
-        <option value="australia">Australia</option>
-        <option value="canada">Canada</option>
-        <option value="usa">USA</option>
+      <label for="class">What age is your child?</label>
+      <select id="class" name="class">
+        <option value="infant">Infant</option>
+        <option value="toddlers">Toddler</option>
+        <option value="preschool">Preschool</option>
       </select>
   
-      <label for="subject">Subject</label>
-      <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+      <label for="message">Message</label>
+      <textarea id="message" name="message" placeholder="Write your message here" style="height:200px"></textarea>
   
       <input type="submit" value="Submit">
   

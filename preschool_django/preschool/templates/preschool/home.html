@@ -1,7 +1,12 @@
 {% extends 'preschool/base.html' %}
 {% load static %}
+{% load svg %}
 {% block content %}
 
+<html>
+    <head>
+        <link rel= "stylesheet" type= "text/css" href= "../../static/css/preschool.css">
+    </head>
 <header>
     <div class="topnav">
         <a class="active" href="">Home</a>
@@ -19,6 +24,34 @@
 <h3>Register your child today</h3>
 <button><a href="{% url 'profile_list' %}" >See our current enrolled children</a></button>
 <button><a href="{% url 'profile_create' %}">Register to reserve your space</a></button>
+<br>
+<br>
+
+<div class="iconBox">
+
+<div class="classIcons">
+    <div class="vegHeader">{% svg 'peas' %}</div>
+    <div class="w3-container w3-center">
+      <p class="iconPara">Our infant class are called sweet peas. They're swaddled up in their little pod.</p>
+    </div>
+</div>
+
+<div class="classIcons">
+    <div class="vegHeader">{% svg 'carrot' %}</div>
+    <div class="w3-container w3-center">
+      <p class="iconPara">Our toddler class are called little carrots. They've done some growing but they're still snug in the ground. </p>
+    </div>
+</div>
+
+<div class="classIcons">
+    <div class="vegHeader">{% svg 'tomato' %}</div>
+    <div class="w3-container w3-center">
+      <p class="iconPara">Our preschool class are called red tomatoes. They've grown up and are ready to see the sun! </p>
+    </div>
+</div>
+
+</div>
+
 
 
 {% endblock %}
