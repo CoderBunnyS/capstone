@@ -1,7 +1,10 @@
+
+
 body {
     font-family: 'Helvetica Neue', sans-serif;
     margin: auto;
-    padding: 2em 1em;    
+    padding: 2em 1em; 
+      
 }
 
 
@@ -147,11 +150,7 @@ a.no-fav {
     margin: 100px 0;
 }
 
-
-
-
-
-  /* Staff Pictures */
+/* -------------Staff Pictures--------------- */
   .staffColumn {
     float: left;
     width: 30%;
@@ -239,10 +238,14 @@ a.no-fav {
 }
 .regBody {
     width: 80%;
-    border: 1px solid brown;
+    
     display: block;
+    margin: auto;
+    
 }
-
+#regBox {
+    
+}
 
 
 
@@ -338,7 +341,6 @@ input[type=text], select, textarea {
 .iconCard {
     display: block;
     width: 30%;
-    
     box-shadow: 4px 4px 8px gray;
     height: 400px;
 }
