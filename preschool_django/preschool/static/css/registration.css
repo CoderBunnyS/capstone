@@ -15,6 +15,12 @@
     margin: auto;
     
 }
-#regBox {
+.register-form {
+    width: 100%;
     
 }
+input {
+    width: 100%;
+    
+}
+

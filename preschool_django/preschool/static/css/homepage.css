@@ -126,3 +126,36 @@
     #row {
         display: flex;
     }
+
+    .buttonDiv {
+        display: flex;
+        color: white;
+        text-align: center;
+        cursor: pointer;
+        padding: 50px;
+        text-decoration: none;
+        align-content: center;
+        justify-content: center;
+        margin-top: 150px;
+        
+       
+      }
+      .no-style {
+        text-decoration: none !important;
+        color: white;
+        font-size: larger;
+        margin: 40px 0;
+    }
+    .button {
+        border: 2px solid #F27A10;
+        display: inline;
+        background-color: #F27A10;
+        color: white;
+        text-align: center;
+        cursor: pointer;
+        padding: 30px;
+        border-radius: 12px;
+        text-decoration: none;
+        margin: 0 50px;
+       
+      }

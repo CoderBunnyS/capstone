@@ -19,7 +19,7 @@
 <h1 class="regHeader">Register your child with our school</h1>
 <p>If you'd like to know more about our curriculum and you think you're ready to enroll your child into our program, please fill out the form below and we will contact you to set up your child's first day!</p>
 <br>
-<form method="POST" class="artist-form">
+<form method="POST" class="register-form">
   {% csrf_token %} {{ form.as_p }}
   <button type="submit" class="save btn btn-default">Save</button>
 </form>
