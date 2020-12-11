@@ -73,7 +73,8 @@ a.no-fav {
 .topnav {
     background-color: #F27A10;
     overflow: hidden;
-    height: 20%;
+    height: 15%;
+    margin-bottom: 80px;
   }
   
   /* Style the links inside the navigation bar */
@@ -82,6 +83,7 @@ a.no-fav {
     color: #f2f2f2;
     text-align: center;
     padding: 40px 35px;
+    height: 100%;
     text-decoration: none;
     font-size: 24px;
     
@@ -104,6 +106,7 @@ a.no-fav {
 
 .homePage {
     margin: 50px;
+    margin-bottom: 150px;
     
 }
 .homeTitle {
@@ -111,12 +114,37 @@ a.no-fav {
     width: 100%;
     font-size: 100px;
     text-align: center;
+    color: #EC2A2E;
+    margin: 100px 0;
+    
     
 }
 
 #introColumn {
-    width: 50%;
+    width: 40%;
+    margin-right: 50px;
     column-gap: 25px;
+    color: gray;
+    font-size: larger;
+    padding: 0 25px;
+}
+.introTitle {
+    margin: 25px 100px 0 75px;
+}
+.introPara {
+    margin: 50px;
+    margin-right: 25px;
+}
+
+/* ---------------HOME PAGE REGISTER & BUTTONS--------------- */
+
+.register {
+    font-family: 'Bubblegum Sans', cursive;
+    width: 100%;
+    font-size: 100px;
+    text-align: center;
+    color: #EC2A2E;
+    margin: 100px 0;
 }
 
 
@@ -124,24 +152,23 @@ a.no-fav {
 
 
   /* Staff Pictures */
-  .column {
+  .staffColumn {
     float: left;
     width: 30%;
     margin-bottom: 16px;
     padding: 0 8px;
+    
+  }
+  .img {
+    height: 150px;
   }
   
-  /* Display the columns below each other instead of side by side on small screens */
-  @media screen and (max-width: 650px) {
-    .column {
-      width: 100%;
-      display: block;
-    }
-  }
+
   
   /* Add some shadows to create a card effect */
   .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    height: 150px;
   }
   
   /* Some left and right padding inside the container */
@@ -161,12 +188,35 @@ a.no-fav {
   }
   
   .button {
-    border: none;
+    border: 2px solid #F27A10;
     display: inline;
-    
+    background-color: #F27A10;
     color: white;
     text-align: center;
     cursor: pointer;
+    padding: 30px;
+    border-radius: 12px;
+    text-decoration: none;
+    margin: 0 50px;
+   
+  }
+
+.no-style {
+    text-decoration: none !important;
+    color: white;
+    font-size: larger;
+    margin: 40px 0;
+}
+
+  .buttonDiv {
+    display: flex;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    padding: 50px;
+    text-decoration: none;
+    align-content: center;
+    justify-content: center;
    
   }
   
@@ -176,6 +226,26 @@ a.no-fav {
   .staffPics {
       border-top: 20px solid white;
   }
+
+
+/* -----------------Registration Page --------------- */
+
+.regHeader {
+    font-size: 50px;
+    font-family: 'Bubblegum Sans', cursive;
+    align-content: center;
+    display: block;
+    
+}
+.regBody {
+    width: 80%;
+    border: 1px solid brown;
+    display: block;
+}
+
+
+
+
 
   /* //CONTACT FORM */
 
@@ -318,3 +388,10 @@ input[type=text], select, textarea {
    
   }
 }
+  /* Display the columns below each other instead of side by side on small screens */
+  @media screen and (max-width: 650px) {
+    .column {
+      width: 100%;
+      display: block;
+    }
+  }

@@ -17,12 +17,13 @@
         <a href="{% url 'contact' %}">Contact Us</a>
       </div> 
 </header>
-<h1 class="homeTitle">One   Family   Developmental   Preschool</h1>
+<h1 class="homeTitle">
+    One   Family   Developmental   Preschool</h1>
 <div class="homePage row">
 <div class="column" id="introColumn">
 
-<h3>One Family Welcomes Everyone</h3>
-<p>One family believes that there is no wrong way to be you and that we are all a part of the same human family. Our classes are geared towards teaching our kids to help others and to ask for help themselves. We have students of all nationalities, colors and abilities</p>
+<h3 class="introTitle">One Family Welcomes Everyone</h3>
+<p class="introPara">One family believes that there is no wrong way to be you and that we are all a part of the same human family. Our classes are geared towards teaching our kids to help others and to ask for help themselves. We have students of all nationalities, colors and abilities</p>
 </div>
 <div class="column" id="introColumn"></div>
 <img src="https://www.naeyc.org/sites/default/files/styles/page_header_media_large/public/102017/everyChild_DSC2547.jpg?itok=FrLHrwsV&timestamp=1507834687" />
@@ -30,8 +31,10 @@
 </div>
 
 <h3 class="register">Register your child today</h3>
-<button class="button"><a href="{% url 'profile_list' %}" >See our current enrolled children</a></button>
-<button class="button"><a href="{% url 'profile_create' %}">Register to reserve your space</a></button>
+<div class="buttonDiv">
+<button class="button"><a href="{% url 'profile_list' %}" class="no-style" >See our current enrolled children</a></button>
+<button class="button"><a href="{% url 'profile_create' %}" class="no-style">Register to reserve your space</a></button>
+</div>
 <br>
 <br>
 
