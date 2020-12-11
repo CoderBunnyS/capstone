@@ -1,0 +1,20 @@
+/* -----------------Registration Page --------------- */
+
+.regHeader {
+    font-size: 50px;
+    font-family: 'Bubblegum Sans', cursive;
+    align-content: center;
+    display: block;
+    
+}
+.regBody {
+    width: 80%;
+    
+    padding-bottom: 200px;
+    display: block;
+    margin: auto;
+    
+}
+#regBox {
+    
+}

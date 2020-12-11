@@ -1,0 +1,128 @@
+/* --------- HOME PAGE PARAGRAPH AND PICTURE------------ */
+
+.homePage {
+    margin: 50px;
+    margin-bottom: 150px;
+    
+}
+.homeTitle {
+    font-family: 'Bubblegum Sans', cursive;
+    width: 100%;
+    font-size: 100px;
+    text-align: center;
+    color: #EC2A2E;
+    margin: 100px 0;
+    
+    
+}
+
+#introColumn {
+    width: 40%;
+    margin-right: 50px;
+    column-gap: 25px;
+    color: gray;
+    font-size: larger;
+    padding: 0 25px;
+}
+.introTitle {
+    margin: 25px 100px 0 75px;
+}
+.introPara {
+    margin: 50px;
+    margin-right: 25px;
+}
+
+/* ---------------HOME PAGE REGISTER & BUTTONS--------------- */
+
+.register {
+    font-family: 'Bubblegum Sans', cursive;
+    width: 100%;
+    font-size: 100px;
+    text-align: center;
+    color: #EC2A2E;
+    margin: 100px 0;
+}
+
+/* HOME PAGE CLASS ICONS */
+.classIcons {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    /* max-width: 300px; */
+    /* margin: auto; */
+    text-align: center;
+    font-family: arial;
+    display: inline;
+    columns: 1fr 1fr 1fr;
+    
+  } 
+  .vegHeader {
+      display: inline;
+      align-items: center;
+      justify-content: space-between;
+  }
+  #peas {
+      
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      margin: auto;
+      padding: 25px 0px;
+  }
+  #carrot {
+      
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      padding: 25px 0px;
+  }
+  #tomato {
+      
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      padding: 25px 0px;
+  }
+  .iconBox {
+      align-items: center;
+      color: gray;
+      display: inline;
+      justify-content: space-evenly;
+  }
+  .iconPara {
+       
+      padding: 25px 40px;
+      text-align: left;
+      font-size: larger;
+  }
+  .iconCard {
+      display: block;
+      width: 30%;
+      box-shadow: 4px 4px 8px gray;
+      height: 400px;
+  }
+  
+  .column {
+      float: left;
+      width: 33.33%;
+      align-items: center;
+      justify-content: center;
+  
+    }
+    
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  
+  
+    #column1, #column2, #column3 {
+      width: 30%;
+      column-gap: 40px;
+      column-gap: 150px;
+      align-items: center;
+      justify-content: space-between;
+    }
+    #row {
+        display: flex;
+    }

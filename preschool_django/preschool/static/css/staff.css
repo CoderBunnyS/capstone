@@ -1,0 +1,93 @@
+/* -------------Staff Pictures--------------- */
+.staffColumn {
+    float: left;
+    width: 30%;
+    margin-bottom: 16px;
+    padding: 0 8px 150px 0;
+    height: fit-content;
+    margin: 0 20px;
+    
+  }
+  .img {
+    height: 150px;
+  }
+  .email {
+      margin: 50px 0 50px;
+  }
+
+  
+  /* Add some shadows to create a card effect */
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    height:100%;
+    
+  }
+  
+  /* Some left and right padding inside the container */
+  .container {
+    padding: 100 16px;
+  }
+  
+  /* Clear floats */
+  .container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .title {
+    color: grey;
+  }
+  
+  .button {
+    border: 2px solid #F27A10;
+    display: inline;
+    background-color: #F27A10;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    padding: 30px;
+    border-radius: 12px;
+    text-decoration: none;
+    margin: 0 50px;
+   
+  }
+
+.no-style {
+    text-decoration: none !important;
+    color: white;
+    font-size: larger;
+    margin: 40px 0;
+}
+
+  .buttonDiv {
+    display: flex;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    padding: 50px;
+    text-decoration: none;
+    align-content: center;
+    justify-content: center;
+    margin-top: 150px;
+    
+   
+  }
+  
+  .button:hover {
+    background-color: #7DB609;
+  }
+  .staffPics {
+      border-top: 20px solid white;
+  }
+
+  .row {
+      width: 90%;
+      margin: auto;
+      margin-top: 150px;
+      
+      
+  }
+  .emailP {
+      padding: 50px 0;
+  }
