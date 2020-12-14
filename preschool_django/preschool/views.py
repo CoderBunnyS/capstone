@@ -1,9 +1,9 @@
-from .models import Profile
+from .models import Profile, User
 from django.shortcuts import render, redirect
 from django.views import View
 from django.views.generic import ListView, DetailView, CreateView, DeleteView, UpdateView
 from django.urls import reverse_lazy
-from .forms import ProfileForm
+from .forms import ProfileForm, UserForm
 
 from rest_framework import generics
 from rest_framework import permissions
@@ -66,3 +66,36 @@ class Contact(View):
 class Staff(View):
     def get(self, request):
         return render(request, 'preschool/staff.html')
+
+
+
+
+class Login(View):
+    form_class = UserForm
+    template_name = 'preschool/login.html'
+    def get(self, request):
+        form = self.form_class()
+        return render(request, self.template_name, {'form': form})
+
+    def post(self, request):
+        form = UserForm(request.POST)
+        if(form.is_valid()):
+            user = form.save()
+            return redirect('profile_detail', pk=user.pk)
+            return render(request, 'preschool/login.html', {'form':form})
+
+
+def profile_edit(request, pk):
+    user = User.objects.get(pk=pk)
+    if request.method == "POST":
+        form = UserForm(request.POST, instance=user)
+        if form.is_valid():
+            user = form.save()
+            return redirect('profile_detail', pk=user.pk)
+        else:
+            form = UserForm(instance=user)
+            return render(request, 'preschool/login.html', {'form': form})
+
+def profile_delete(request, pk):
+    User.objects.get(id=pk).delete()
+    return redirect('profile_list')

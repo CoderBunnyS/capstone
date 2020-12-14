@@ -10,7 +10,6 @@ urlpatterns = [
     path('childname/<int:pk>/delete', views.profile_delete, name='profile_delete'),
     path('', views.Home.as_view(), name='home'),
     path('contact/', views.Contact.as_view(), name='contact'),
-    path('staff/', views.Staff.as_view(), name='staff'),
-    
-    
+    path('staff/', views.Staff.as_view(), name='staff'),    
+    path('login/', views.Login.as_view(), name='login'),    
 ]
