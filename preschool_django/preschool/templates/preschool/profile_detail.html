@@ -4,6 +4,7 @@
     <head>
         <link rel= "stylesheet" type= "text/css" href= "../../static/css/preschool.css">
         <link rel= "stylesheet" type= "text/css" href= "../../static/css/navbar.css">
+        <link rel= "stylesheet" type= "text/css" href= "../../static/css/detail.css">
     </head>
 <header>
   <div class="topnav">
@@ -13,15 +14,21 @@
       <a href="{% url 'contact' %}">Contact Us</a>
     </div> 
 </header>
-<h2>Profiles</h2>
-<h4>Child's Name: {{ profile.childname }}</h4>
+<h2>Child and Family Profile</h2>
+<hr>
+<h4></h4>
 <ul>
   
-  <li>Parent's Name: {{ profile.parentname }}</li>
-  <li>Child's Age: {{ profile.age }}</li>
-  <li>Child's date of birth: {{ profile.dob }}</li>
-  <li>Phone Number: {{ profile.phonenum }}</li>
-  <li>Email Address: {{ profile.email }}</li>
-  <li>List any allergies your child has: {{ profile.allergies }}</li>
+  <li>Family's Member Number: <br> {{ profile.pk }}</li>
+  <li>Child's Name: <br> {{ profile.childname }}</li>
+  <li>Parent's Name:  <br> {{ profile.parentname }}</li>
+  <li>Age:  <br> {{ profile.age }}</li>
+  <li>Date of birth:  <br> {{ profile.dob }}</li>
+  <li>Phone:  <br> {{ profile.phonenum }}</li>
+  <li>Email:  <br> {{ profile.email }}</li>
+  <li>Allergens:  <br> {{ profile.allergies }}</li>
 </ul>
+
+
+
 {% endblock %}

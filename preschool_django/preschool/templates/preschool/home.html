@@ -17,8 +17,10 @@
         <a href="{% url 'profile_create' %}">Register</a>
         <a href="{% url 'staff' %}">Our Staff</a>
         <a href="{% url 'contact' %}">Contact Us</a>
+        <a href="{% url 'login' %}">Staff Login</a>
       </div> 
 </header>
+<body>
 <h1 class="homeTitle">
     One   Family   Developmental   Preschool</h1>
 <div class="homePage row">
@@ -34,7 +36,9 @@
 
 <h3 class="register">Register your child today</h3>
 <div class="buttonDiv">
+{% if staff_logged_in %}
 <button class="button"><a href="{% url 'profile_list' %}" class="no-style" >See our current enrolled children</a></button>
+{% endif %}
 <button class="button"><a href="{% url 'profile_create' %}" class="no-style">Register to reserve your space</a></button>
 </div>
 <br>
@@ -64,7 +68,12 @@
         </div>
       </div>
 </div>
-
+</body>
+<footer class="footer">
+    <p>Author: Bunny Schaefer</p><br>
+    
+</footer>
+</html>
 
 
 {% endblock %}

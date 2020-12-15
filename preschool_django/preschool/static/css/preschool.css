@@ -10,7 +10,7 @@ body {
 
 ul {
     list-style-type: none;
-    border: 3px solid yellow;
+    
 }
 
 li {
@@ -70,6 +70,15 @@ a.no-fav {
 .fav:visited,
 .no-fav:visited {
     text-decoration: none;
+}
+
+.footer {
+  height: 100px;
+  background-color: #7DB609;
+  color: gray;
+  border: 1px solid red;
+  width: 100%;
+
 }
 
 

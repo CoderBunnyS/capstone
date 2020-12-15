@@ -8,7 +8,7 @@ from .forms import ProfileForm, UserForm
 from rest_framework import generics
 from rest_framework import permissions
 
-
+staff_logged_in = False
 # Create your views here.
 
 class ProfileList(View):
@@ -57,7 +57,8 @@ def profile_delete(request, pk):
 
 class Home(View):
     def get(self, request):
-        return render(request, 'preschool/Home.html')
+        staff_logged_in = request.session.get('staff_logged_in', False)
+        return render(request, 'preschool/Home.html', {'staff_logged_in': staff_logged_in})
 
 class Contact(View):
     def get(self, request):
@@ -79,23 +80,23 @@ class Login(View):
 
     def post(self, request):
         form = UserForm(request.POST)
+        
         if(form.is_valid()):
             user = form.save()
-            return redirect('profile_detail', pk=user.pk)
-            return render(request, 'preschool/login.html', {'form':form})
+            request.session['staff_logged_in'] = True
+            return redirect('/', pk=user.pk)
+            
+    # def profile_edit(request, pk):
+    #     user = User.objects.get(pk=pk)
+    #     if request.method == "POST":
+    #         form = UserForm(request.POST, instance=user)
+    #     if form.is_valid():
+    #         user = form.save()
+    #         return redirect('profile_detail', pk=user.pk)
+    #     else:
+    #         form = UserForm(instance=user)
+    #         return render(request, 'preschool/login.html', {'form': form})
 
-
-def profile_edit(request, pk):
-    user = User.objects.get(pk=pk)
-    if request.method == "POST":
-        form = UserForm(request.POST, instance=user)
-        if form.is_valid():
-            user = form.save()
-            return redirect('profile_detail', pk=user.pk)
-        else:
-            form = UserForm(instance=user)
-            return render(request, 'preschool/login.html', {'form': form})
-
-def profile_delete(request, pk):
-    User.objects.get(id=pk).delete()
-    return redirect('profile_list')
+    # def profile_delete(request, pk):
+    #     User.objects.get(id=pk).delete()
+    #     return redirect('profile_list')
