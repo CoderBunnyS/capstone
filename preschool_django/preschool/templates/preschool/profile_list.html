@@ -1,9 +1,13 @@
-{% extends 'preschool/base.html' %} {% load static %} {% block content %}
+{% extends 'preschool/base.html' %} {% load static %}
+{% load svg %} {% block content %}
 
 <html>
     <head>
         <link rel= "stylesheet" type= "text/css" href= "../../static/css/preschool.css">
         <link rel= "stylesheet" type= "text/css" href= "../../static/css/navbar.css">
+        <link rel= "stylesheet" type= "text/css" href= "../../static/css/preschool.css">
+        <link rel= "stylesheet" type= "text/css" href= "../../static/css/profile_list.css">
+        <link rel= "stylesheet" type= "text/css" href= "../../static/css/homepage.css">
     </head>
 
 <header>
@@ -14,11 +18,26 @@
       <a href="{% url 'contact' %}">Contact Us</a>
     </div> 
 </header>
-<h2>Student Names<a href="{% url 'profile_create' %}">(+)</a></h2>
-<ul>
+<h2>Current Students</h2>
+<button id="listButton"><a class="buttonAnchor" href="{% url 'profile_create' %}">Add a New Student</a></button>
+
+<div class="listRow">
+  <div class="listColumn">
+    {% svg 'peas' %}
+  </div>
+  <div class="listColumn">
+    {% svg 'carrot' %}
+  </div>
+  <div class="listColumn">
+    {% svg 'tomato' %}
+  </div>
+</div>
+
+
+<ul class="listList">
   {% for profile in profiles %}
-  <li>
-    <a href="{% url 'profile_detail' pk=profile.id %}">{{ profile.childname }}</a>
+  <li class="listItem">
+    <button><a class="detailAnchor" href="{% url 'profile_detail' pk=profile.id %}">Edit/Delete Student</a></button>Student Id: {{ profile.pk }} - {{ profile.childname }} 
   </li>
   {% endfor %}
 </ul>
