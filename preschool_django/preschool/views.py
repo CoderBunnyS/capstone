@@ -47,9 +47,9 @@ def profile_edit(request, pk):
         if form.is_valid():
             profile = form.save()
             return redirect('profile_detail', pk=profile.pk)
-        else:
-            form = ProfileForm(instance=profile)
-            return render(request, 'preschool/profile_form.html', {'form': form})
+    else:
+        form = ProfileForm(instance=profile)
+        return render(request, 'preschool/profile_form.html', {'form': form})
 
 def profile_delete(request, pk):
     Profile.objects.get(id=pk).delete()
@@ -80,23 +80,8 @@ class Login(View):
 
     def post(self, request):
         form = UserForm(request.POST)
-        
         if(form.is_valid()):
             user = form.save()
             request.session['staff_logged_in'] = True
             return redirect('/', pk=user.pk)
             
-    # def profile_edit(request, pk):
-    #     user = User.objects.get(pk=pk)
-    #     if request.method == "POST":
-    #         form = UserForm(request.POST, instance=user)
-    #     if form.is_valid():
-    #         user = form.save()
-    #         return redirect('profile_detail', pk=user.pk)
-    #     else:
-    #         form = UserForm(instance=user)
-    #         return render(request, 'preschool/login.html', {'form': form})
-
-    # def profile_delete(request, pk):
-    #     User.objects.get(id=pk).delete()
-    #     return redirect('profile_list')

@@ -3,6 +3,7 @@
     <head>
         <link rel= "stylesheet" type= "text/css" href= "../../static/css/preschool.css">
         <link rel= "stylesheet" type= "text/css" href= "../../static/css/navbar.css">
+        <link rel= "stylesheet" type= "text/css" href= "../../static/css/homepage.css">
     </head>
 <header>
     <div class="topnav">
@@ -12,9 +13,9 @@
         <a href="{% url 'contact' %}">Contact Us</a>
       </div> 
 </header>
-<h1>Delete {{profile.childname}}'s profile' ?</h1>
-<form method="POST" action="{% url 'profile_delete' pk=profile.pk %}">
+<h1>Edit {{profile.childname}}'s profile' ?</h1>
+<form method="POST" action="{% url 'profile_edit' pk=profile.pk %}">
     {% csrf_token %}
-    <input type="submit" value="Confirm Delete">
+    <input type="submit" value="Confirm Edit">
 </form>
 {% endblock %}

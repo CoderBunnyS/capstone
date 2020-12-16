@@ -5,6 +5,8 @@
         <link rel= "stylesheet" type= "text/css" href= "../../static/css/preschool.css">
         <link rel= "stylesheet" type= "text/css" href= "../../static/css/navbar.css">
         <link rel= "stylesheet" type= "text/css" href= "../../static/css/detail.css">
+        <link rel= "stylesheet" type= "text/css" href= "../../static/css/homepage.css">
+        <link rel= "stylesheet" type= "text/css" href= "../../static/css/detailMenu.css">
     </head>
 <header>
   <div class="topnav">
@@ -14,21 +16,30 @@
       <a href="{% url 'contact' %}">Contact Us</a>
     </div> 
 </header>
+<ul class="breadcrumb">
+  <li><a href="{% url 'profile_list' %}">Back to student List</a></li>
+</ul>
 <h2>Child and Family Profile</h2>
+
 <hr>
-<h4></h4>
 <ul>
-  
+  <div class="listDiv">
   <li>Family's Member Number: <br> {{ profile.pk }}</li>
   <li>Child's Name: <br> {{ profile.childname }}</li>
   <li>Parent's Name:  <br> {{ profile.parentname }}</li>
   <li>Age:  <br> {{ profile.age }}</li>
+  <div class="columnGap"></div>
+  </div>
+  <div class="listDiv">
   <li>Date of birth:  <br> {{ profile.dob }}</li>
   <li>Phone:  <br> {{ profile.phonenum }}</li>
   <li>Email:  <br> {{ profile.email }}</li>
   <li>Allergens:  <br> {{ profile.allergies }}</li>
+</div>
 </ul>
 
-
-
+<div class="buttonContainer">
+<button class="button"><a href="{% url 'profile_delete' pk=profile.id %}" class="no-style">Delete</a></button>
+<button class="button"><a href="{% url 'profile_edit' pk=profile.id %}" class="no-style">Edit</a></button>
+</div>
 {% endblock %}

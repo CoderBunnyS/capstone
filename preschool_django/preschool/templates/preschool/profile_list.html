@@ -38,7 +38,9 @@
 <ul class="listList">
   {% for profile in profiles %}
   <li class="listItem">
-    <button><a class="detailAnchor" href="{% url 'profile_detail' pk=profile.id %}">Edit/Delete Student</a></button>Student Id: {{ profile.pk }} - {{ profile.childname }} 
+    <button>
+      <a class="detailAnchor" href="{% url 'profile_detail' pk=profile.id %}">Student Details</a>
+    </button>Student Id: {{ profile.pk }} - {{ profile.childname }} 
   </li>
   {% endfor %}
 </ul>
