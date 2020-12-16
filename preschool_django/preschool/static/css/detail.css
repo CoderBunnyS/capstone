@@ -1,10 +1,36 @@
-h2 {
+.detailRow {
+    display: inline;
+    border: 1px solid blue;
+}
+
+li {
+    margin: 1.5em 5em;
+    
+    
     
 }
-li {
-    margin: 1.5em;
-    
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 100px;
 }
 hr {
     height: 2px;
 }
+.listDiv {
+    display: inline;
+    margin: 1em 2em 0;
+}
+.no-style {
+    text-decoration: none !important;
+    color: white;
+    font-size: larger;
+    margin: 40px 0;
+}
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+

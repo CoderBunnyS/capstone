@@ -73,15 +73,22 @@ a.no-fav {
 }
 
 .footer {
-  height: 100px;
   background-color: #7DB609;
-  color: gray;
-  border: 1px solid red;
+  color: #2F2F2F;
   width: 100%;
+  margin-top: 150px;
+  height: fit-content;
+  justify-content: space-between;
+  display: flex;
+
 
 }
 
-
+.footerColumn {
+  justify-content: space-evenly;
+  display: flex;
+  padding: 20px;
+}
 
 
 

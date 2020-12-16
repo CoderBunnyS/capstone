@@ -20,7 +20,7 @@
     width: 40%;
     margin-right: 50px;
     column-gap: 25px;
-    color: gray;
+    color: #2F2F2F;
     font-size: larger;
     padding: 0 25px;
 }
@@ -88,7 +88,7 @@
       justify-content: space-evenly;
   }
   .iconPara {
-       
+      margin: 5px; 
       padding: 25px 40px;
       text-align: left;
       font-size: larger;
@@ -159,4 +159,5 @@
         margin: 0 50px;
        
       }
+
     
