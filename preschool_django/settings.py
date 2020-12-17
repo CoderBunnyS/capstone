@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'preschool',
     'django_extensions',
     'rest_framework',
-    'bootstrap3',
+   
     'svg',
 ]
 
