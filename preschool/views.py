@@ -58,7 +58,7 @@ def profile_delete(request, pk):
 class Home(View):
     def get(self, request):
         staff_logged_in = request.session.get('staff_logged_in', False)
-        return render(request, 'preschool/Home.html', {'staff_logged_in': staff_logged_in})
+        return render(request, 'preschool/home.html', {'staff_logged_in': staff_logged_in})
 
 class Contact(View):
     def get(self, request):
