@@ -79,8 +79,9 @@ class Login(View):
         return render(request, self.template_name, {'form': form})
 
     def post(self, request):
-        form = UserForm()
+        form = UserForm(request.POST)
         if(form.is_valid()):
+            user = form.save()
             request.session['staff_logged_in'] = True
-            return redirect('/')
+            return render('/', pk=user.pk)
             
