@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'django_extensions',
     'rest_framework',
     'svg',
-    'bootstrap3'
+
    
     
 ]
