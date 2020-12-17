@@ -81,7 +81,7 @@ class Login(View):
     def post(self, request):
         form = UserForm(request.POST)
         if(form.is_valid()):
-            user = self.form.save()
+            
             request.session['staff_logged_in'] = True
             return redirect('/', pk=user.pk)
             
