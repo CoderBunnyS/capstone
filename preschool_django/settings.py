@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 import os
 from pathlib import Path
-import django_heroku
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,7 +26,7 @@ SECRET_KEY = '_ho5^%sf2s8iose-(_efr3qx58ummj+gi5k=xkhqw+!$jiuf*4'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['guarded-fjord-64430.herokuapp.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'preschool',
     'django_extensions',
     'rest_framework',
+    'svg',
+    'bootstrap3'
    
     
 ]
@@ -79,18 +81,19 @@ WSGI_APPLICATION = 'preschool_django.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'preschool',
-#         'USER': 'preuser',
-#         'PASSWORD': 'preschool',
-#         'HOST': 'localhost'
-#     }
-# }
-import dj_database_url 
-DATABASES = {}
-DATABASES['default'] = dj_database_url.config(conn_max_age=600)
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'preschool',
+        'USER': 'preuser',
+        'PASSWORD': 'preschool',
+        'HOST': 'localhost'
+    }
+}
+
+# import dj_database_url 
+# DATABASES = {}
+# DATABASES['default'] = dj_database_url.config(conn_max_age=600)
 
 
 
@@ -137,4 +140,3 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
 
 
-django_heroku.settings(locals())
