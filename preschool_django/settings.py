@@ -98,7 +98,7 @@ DATABASES = {
         'NAME': 'preschool',
         'USER': 'preuser',
         'PASSWORD': 'preschool',
-        'HOST': dj_database_url.config(conn_max_age=600)
+        'HOST': dj_database_url.config
     }
 }
 
