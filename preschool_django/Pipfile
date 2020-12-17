@@ -9,6 +9,8 @@ psycopg2-binary = "*"
 django-extensions = "*"
 ipython = "*"
 djangorestframework = "*"
+dj-database-url = "*"
+gunicorn = "*"
 
 [dev-packages]
 
