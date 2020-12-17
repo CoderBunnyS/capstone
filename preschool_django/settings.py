@@ -91,20 +91,20 @@ WSGI_APPLICATION = 'preschool_django.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'preschool',
-#         'USER': 'preuser',
-#         'PASSWORD': 'preschool',
-#         'HOST': 'localhost'
-#     }
-# }
-
 import dj_database_url 
-DATABASES = {}
-DATABASES['default'] = dj_database_url.config(conn_max_age=600)
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'preschool',
+        'USER': 'preuser',
+        'PASSWORD': 'preschool',
+        'HOST': dj_database_url.config(conn_max_age=600)
+    }
+}
+
+# import dj_database_url 
+# DATABASES = {}
+# DATABASES['default'] = dj_database_url.config(conn_max_age=600)
 
 
 
