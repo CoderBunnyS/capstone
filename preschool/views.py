@@ -83,5 +83,5 @@ class Login(View):
         if(form.is_valid()):
             
             request.session['staff_logged_in'] = True
-            return redirect('/', pk=user.pk)
+            return redirect('/')
             
