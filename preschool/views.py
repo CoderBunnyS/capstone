@@ -83,5 +83,5 @@ class Login(View):
         # if(form.is_valid()):
             # user = form.save()
             request.session['staff_logged_in'] = True
-            return render('/', pk=user.pk)
+            return render('/')
             
