@@ -1,0 +1,26 @@
+{% extends 'preschool/base.html' %}
+{% load static %}
+{% load svg %}
+{% block content %}
+
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="../static/css/preschool.css">
+        <link rel="stylesheet" type="text/css" href="../static/css/navbar.css">
+        <link rel="stylesheet" type="text/css" href="../static/css/homepage.css">
+    </head>
+<header>
+    <div class="topnav">
+        <a class="active" href="">Home</a>
+        <a href="{% url 'profile_create' %}">Register</a>
+        <a href="{% url 'staff' %}">Our Staff</a>
+        <a href="{% url 'contact' %}">Contact Us</a>
+        <a href="{% url 'login' %}">Staff Login</a>
+      </div> 
+</header>
+<body>
+    <br /><br />
+    <a href="http://www.birdhousehq.com/autism-today-and-preparing-for-tomorrow/"><img src="http://d9hhrg4mnvzow.cloudfront.net/www.birdhousehq.com/autism-today-and-preparing-for-tomorrow/9f504a73-birdhouse-future-of-autism_0pk23a0pk23a000000.jpg" alt="Autism Today and Preparing for Tomorrow" /></a><br /><br />
+</body>

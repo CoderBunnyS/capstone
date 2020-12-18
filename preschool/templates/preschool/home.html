@@ -28,7 +28,7 @@
 <div class="column" id="introColumn">
 
 <h3 class="introTitle">One Family Welcomes Everyone</h3>
-<p class="introPara">One family believes that there is no wrong way to be you and that we are all a part of the same human family. Our classes are geared towards teaching our kids to help others and to ask for help themselves. We have students of all nationalities, colors and abilities</p>
+<p class="introPara">One family believes that there is no wrong way to be you and that we are all a part of the same human family. Our focus is on helpiung children on the autism spectrum live their best lives. Our classes are geared towards teaching our kids to help others and to ask for help themselves. We have students of all nationalities, colors and abilities</p>
 </div>
 <div class="column" id="introColumn"></div>
 <img src="https://www.naeyc.org/sites/default/files/styles/page_header_media_large/public/102017/everyChild_DSC2547.jpg?itok=FrLHrwsV&timestamp=1507834687" />
@@ -38,9 +38,9 @@
 <h3 class="register">Register your child today</h3>
 <div class="buttonDiv">
 
-{% if staff_logged_in %}
-<button class="button"><a href="{% url 'profile_list' %}" class="no-style" >Current enrolled children</a></button>
-{% endif %}
+
+<button class="button"><a href="{% url 'list' %}" class="no-style" >Info about Autism</a></button>
+
 
 <button class="button"><a href="{% url 'profile_create' %}" class="no-style">Register to reserve your space</a></button>
 </div>
@@ -71,8 +71,7 @@
         </div>
       </div>
 </div>
-<!-- <br /><br />
-<a href="http://www.birdhousehq.com/autism-today-and-preparing-for-tomorrow/"><img src="http://d9hhrg4mnvzow.cloudfront.net/www.birdhousehq.com/autism-today-and-preparing-for-tomorrow/9f504a73-birdhouse-future-of-autism_0pk23a0pk23a000000.jpg" alt="Autism Today and Preparing for Tomorrow" /></a><br /><br />  -->
+
 
 </body>
 <footer class="footer row">
