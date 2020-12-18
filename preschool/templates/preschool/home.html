@@ -38,8 +38,8 @@
 <h3 class="register">Register your child today</h3>
 <div class="buttonDiv">
 
-{% staff_logged_in %}
-{% end staff_logged_in %}
+{{ staff_logged_in }}
+
 {% if staff_logged_in %}
 <button class="button"><a href="{% url 'profile_list' %}" class="no-style" >Current enrolled children</a></button>
 {% endif %}
