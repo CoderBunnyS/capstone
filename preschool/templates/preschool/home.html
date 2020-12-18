@@ -37,8 +37,10 @@
 
 <h3 class="register">Register your child today</h3>
 <div class="buttonDiv">
+
+{% staff_logged_in %}
 {% if staff_logged_in %}
-<button class="button"><a href="{% url 'profile_list' %}" class="no-style" >See our current enrolled children</a></button>
+<button class="button"><a href="{% url 'profile_list' %}" class="no-style" >Current enrolled children</a></button>
 {% endif %}
 <button class="button"><a href="{% url 'profile_create' %}" class="no-style">Register to reserve your space</a></button>
 </div>
