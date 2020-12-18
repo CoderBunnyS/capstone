@@ -85,5 +85,5 @@ class Login(View):
             # user = form.save()
             # request.session['staff_logged_in'] = True
             staff_logged_in = True
-            return render('/')
+            return render('/', {'staff_logged_in': staff_logged_in})
             
