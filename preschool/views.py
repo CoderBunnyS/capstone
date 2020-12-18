@@ -57,8 +57,8 @@ def profile_delete(request, pk):
 
 class Home(View):
     def get(self, request):
-        # staff_logged_in = request.session.get('staff_logged_in', False)
-        staff_logged_in = False
+        staff_logged_in = request.session.get('staff_logged_in', False)
+        
         return render(request, 'preschool/home.html', {'staff_logged_in': staff_logged_in})
 
 class Contact(View):
@@ -80,10 +80,10 @@ class Login(View):
         return render(request, self.template_name, {'form': form})
 
     def post(self, request):
-        # form = UserForm(request.POST)
-        # if(form.is_valid()):
-            # user = form.save()
-            # request.session['staff_logged_in'] = True
+        form = UserForm(request.POST)
+        if(form.is_valid()):
+            user = form.save()
+            request.session['staff_logged_in'] = True
             staff_logged_in = True
             return render('/', {'staff_logged_in': staff_logged_in})
             
