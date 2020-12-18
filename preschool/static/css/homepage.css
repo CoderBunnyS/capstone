@@ -162,6 +162,10 @@
 
       .info {
           align-items: center;
+          display: flex;
+      }
+      .infoImg {
+          justify-content: center;
       }
 
     
