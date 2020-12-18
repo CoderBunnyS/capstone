@@ -166,6 +166,10 @@
       }
       .infoImg {
           justify-content: center;
+          margin: auto;
+          align-items: center;
+          align-self: center;
+          align-content: center;
       }
 
     
