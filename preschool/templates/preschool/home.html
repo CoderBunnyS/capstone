@@ -39,9 +39,11 @@
 <div class="buttonDiv">
 
 {% staff_logged_in %}
+{% endblock %}
 {% if staff_logged_in %}
 <button class="button"><a href="{% url 'profile_list' %}" class="no-style" >Current enrolled children</a></button>
 {% endif %}
+
 <button class="button"><a href="{% url 'profile_create' %}" class="no-style">Register to reserve your space</a></button>
 </div>
 <br>
