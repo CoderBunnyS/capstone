@@ -14,7 +14,7 @@ staff_logged_in = False
 class ProfileList(View):
     def get(self, request):
         profiles = Profile.objects.all()
-        return render(request, './preschool/profile_list.html', {'profiles': profiles})
+        return render(request, 'preschool/profile_list.html', {'profiles': profiles})
 
 # class ProfileDetail(generics.RetrieveUpdateDestroyAPIView):
 #     queryset = Profile.objects.all()
