@@ -68,6 +68,7 @@ class Contact(View):
 class Staff(View):
     def get(self, request):
         return render(request, 'preschool/staff.html')
+        
 class Info(View):
     def get(self, request):
         return render(request, 'preschool/info.html')
