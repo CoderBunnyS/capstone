@@ -13,8 +13,7 @@ import os
 from pathlib import Path
 import mimetypes 
 mimetypes.add_type('text/css', '.css', True)
-import django_heroku
-django_heroku.settings(locals())
+
 
 
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
